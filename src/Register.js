@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 const Register = () => {
   return (
     <div
-      class="flex flex-col gap-5 justify-center items-center
+      class="flex flex-col gap-5 justify-center items-center w-full
     ">
-      <i className="text-2xl font-bold my-10"> Registeration Page</i>
+      <i className="text-5xl font-bold my-10"> Registeration Page</i>
       <form
         action="/users/register"
-        className="flex flex-col gap-5 justify-center items-center"
+        className="flex flex-col gap-5 justify-center items-center text-3xl border-2 rounded-2xl px-8 py-5"
         method="post">
         <div className="flex-for-reg">
-          <label for="name">Name</label>
+          <label for="name" className="mr-[10rem]">
+            Name
+          </label>
           <input
             type="name"
             id="name"
@@ -21,7 +23,9 @@ const Register = () => {
           />
         </div>
         <div className="flex-for-reg">
-          <label for="stdId">Student ID</label>
+          <label for="stdId" className="mr-[6rem]">
+            Student ID
+          </label>
           <input
             type="name"
             id="stdId"
@@ -31,7 +35,9 @@ const Register = () => {
           />
         </div>
         <div className="flex-for-reg">
-          <label for="email">Email</label>
+          <label for="email" className="mr-[10rem]">
+            Email
+          </label>
           <input
             type="email"
             id="email"
@@ -41,7 +47,9 @@ const Register = () => {
           />
         </div>
         <div className="flex-for-reg">
-          <label for="password">Password</label>
+          <label for="password" className="mr-28">
+            Password
+          </label>
           <input
             type="password"
             id="password"
@@ -51,7 +59,9 @@ const Register = () => {
           />
         </div>
         <div className="flex-for-reg">
-          <label for="password2">Confirm Password</label>
+          <label for="password2" className="">
+            Confirm Password
+          </label>
           <input
             type="password"
             id="password2"
@@ -60,13 +70,13 @@ const Register = () => {
             placeholder="Confirm Password"
           />
         </div>{' '}
-        <button type="submit" class="home-btn1 px-10">
+        <button type="submit" class="home-btn1 px-10 w-1/2">
           Register
         </button>
       </form>
       <p class="text-xl mt-4 font-bold">
         Have An Account?{' '}
-        <Link className="home-btn1 px-10" to="/users/login">
+        <Link className="home-btn1 px-10" to="/login">
           Login
         </Link>
       </p>

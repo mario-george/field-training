@@ -4,6 +4,7 @@ import './index.css';
 import Home from './Home';
 
 import Register from './Register';
+import Login from './Login';
 export default function App() {
   return (
     <>
@@ -17,7 +18,12 @@ export default function App() {
               activeClassName="text-white bg-black  duration-200 app-nav  ">
               <div className="translate-y-5">Home</div>
             </NavLink>
-
+            <NavLink
+              to="/login"
+              className=" px-8 h-[5rem] duration-200 hover:text-black "
+              activeClassName="text-white bg-black  duration-200 app-nav  ">
+              <div className="translate-y-5">Login</div>
+            </NavLink>
             {/* NavLink is better than Link that it has activeClassName prop that activate when the route is active */}
             <NavLink
               to="/search-student"
@@ -38,8 +44,12 @@ export default function App() {
         <Route path="/" exact>
           <Redirect to="/home" />
         </Route>
+
         <Route path="/home" exact>
           <Home />
+        </Route>
+        <Route path="/login" exact>
+          <Login />
         </Route>
         <Route path="/register" exact>
           <Register />
